@@ -10,5 +10,5 @@ RingType = TypeVar("RingType")
 
 
 class Ring(Group, AdditiveGroup, metaclass=ABCMeta):
-    def test_distributive(self: RingType, x: RingType, y: RingType) -> bool:
-        return self * (x + y) == self * x + self * y
+    def test_distributive(self: RingType, x: RingType, y: RingType):
+        assert self * (x + y) == self * x + self * y
